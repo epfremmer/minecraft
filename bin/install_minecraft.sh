@@ -1,5 +1,9 @@
 #!/bin/bash
 
+pushd `dirname $0` > /dev/null
+SCRIPTPATH=`pwd -P`
+popd > /dev/null
+
 # Install minecraft server
 sudo apt-get update
 sudo apt-get install default-jdk
@@ -14,8 +18,11 @@ wget -O - http://overviewer.org/debian/overviewer.gpg.asc | sudo apt-key add -
 sudo apt-get update
 apt-get install minecraft-overviewer
 
+# return to bin dir
+cd ${SCRIPTPATH}
+
 # Install minecraft init.d script
-./minecraft_service.sh
+cp ./minecraft_service.sh /etc/init.d/
 
 # Setup backup/map crons
 ./cron_setup.sh
