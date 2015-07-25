@@ -1,0 +1,10 @@
+# Generate map
+0 4 * * * /etc/init.d/minecraft genmap >> /var/log/minecraft/overviewer-map.log 2>&1
+
+# Generate map markers only
+#5 8 * * * /etc/init.d/minecraft genpoi >> /var/log/minecraft/overviewer-poi.log 2>&1
+
+# Backups
+0 3 * * * /etc/init.d/minecraft backup >> /var/log/minecraft/backup_world.log 2>&1
+#21 23 * * * /etc/init.d/minecraft backup_daily >> /var/log/minecraft/backup_world.log 2>&1
+#40 14 * * 1 /etc/init.d/minecraft backup_weekly >> /var/log/minecraft/backup_world.log 2>&1
