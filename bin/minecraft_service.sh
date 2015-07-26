@@ -17,7 +17,7 @@
 #Settings
 SERVICE='minecraft_server.jar'
 OPTIONS='nogui'
-USERNAME='root'
+USERNAME='minecraft'
 WORLD='world'
 MCPATH='/etc/minecraft'
 BACKUPPATH='/etc/minecraft/bck/hourly'
