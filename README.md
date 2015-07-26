@@ -21,7 +21,7 @@ Includes automatic installation/generation of:
 
 Download and run the installation script
 
-* Clone the repo `git clone git@github.com:epfremmer/minecraft.git`
+* Clone the repo `git clone https://github.com/epfremmer/minecraft.git`
 * Go to root directory `cd minecraft` 
 * Run install script `bin/install_minecraft.sh`
 
